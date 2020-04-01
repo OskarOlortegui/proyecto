@@ -1,0 +1,464 @@
+/*Universal CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font: 1rem/1.5 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*--------------------------Header*/
+header{
+    background-color: #F9EFF9;
+    padding: 10px;
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+}
+/*Logo SVG*/
+#brand{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items:center;
+}
+
+#brand #title{
+ font-size: 1rem;
+ color: #003249;
+ font-weight: 600;
+ letter-spacing: 2px;
+}
+
+#brand img{
+  width: 80px;
+}
+        /*Aplicando Javascript*/
+        header nav ul{
+          transform: translateX(60%);
+          opacity: 0;
+          transition: all .6s ease-out;
+        }
+
+        /*toggel con Javascript*/
+        .nav-active{
+          transform: translateX(0%);
+          opacity: 1;
+          z-index: 2;
+        }
+
+header nav ul li{
+  display: inline-block;
+  padding: 24px;
+}
+
+header nav ul li a{
+    color: #003249;
+    font-weight: 600;
+}
+
+header nav ul li a[id^='i']:hover{
+    color: red;
+    transition-duration: .5s;
+}
+
+        /*FontAwesome Icons*/
+        header nav ul li a#iHome::before{
+            content: '\f015'; /*<i class="fas fa-home"></i>*/
+            font-family: fontAwesome;
+            padding-right: 8px;
+        }
+
+        header nav ul li a#iEdu::before{
+            content: '\f19d'; /* <i class="fas fa-graduation-cap"></i> */
+            font-family: fontAwesome;
+            padding-right: 8px;
+        }
+
+        header nav ul li a#iExp::before{
+            content: '\f234'; /* <i class="fas fa-user-plus"></i> */
+            font-family: fontAwesome;
+            padding-right: 8px;
+        }
+                /*Burger*/
+                .burger{
+                   position: relative;
+                   right: 18px;
+                   top: 20px;
+               }
+                .burger > div{
+                    width: 25px;
+                    height: 3px;
+                    background-color: #003249;
+                    margin: 5px;
+
+                    transition: all .4s ease;
+                }
+                /*burger JS toogle*/
+               .equis .line1{
+                   transform: rotate(-45deg) translate(-5px,6px);
+               }
+               .equis .line2{
+                   opacity: 0;
+               }
+               .equis .line3{
+                   transform: rotate(45deg) translate(-5px,-6px);
+               }
+/*-----------------------------END Header*/
+
+/*------------Section-----------------*/
+section{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+
+section .phone{
+  width: 50%;
+}
+
+section ul{
+  perspective: 1000px;
+  margin-left: 60px;
+}
+
+section ul li{
+  display: grid;
+  grid-template-columns: 20% auto;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  align-items: center;
+   transform: rotateY(-30deg) rotateX(15deg);
+   border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+section ul li:hover{
+    transform: rotateY(-22deg) rotateX(7deg) scale(1.03);
+    transition: transform .4s ease-out;
+}
+
+section ul li:nth-child(1){
+  background: #bfe8fc;
+}
+
+section ul li:nth-child(2){
+  background: #faffc8;
+}
+
+section ul li img{
+  width: 60px;
+}
+
+section ul li span{
+  font-size: 1.6rem;
+}
+
+/*Curriculum titulo*/
+section .behind{
+  position: absolute;
+  font-size: 126px;
+  font-family: "Times New Roman", Times, serif;
+  color: #252627;
+  z-index: -1;
+  top: 10px;
+}
+
+/*-----------------------Footer*/
+footer{
+  background: #252627;
+  padding: 20px;
+  color: #fff;
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .container ul li{
+  line-height: 2.5;
+}
+
+footer .contacto i,
+footer .redes-sociales i{
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+/*-----------------INDEX MAIN*/
+main{
+    background-color: #F9EFF9;
+    padding: 10px;
+}
+
+main h1{
+  font-size: 46px;
+  font-family: "Times New Roman", Times, serif;
+  color: #252627;
+  margin: 20px;
+}
+
+main .container{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+main .container .me{
+  width: 100%;
+  border-radius: 50%;
+}
+
+main .container p{
+  text-align: justify;
+}
+
+main .container ul{
+  text-align: center;
+  height: 60%;
+}
+
+main .container ul .idiomas{
+  color: #252627;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .container ul li{
+  line-height: 2;
+}
+
+/*-----------------Educacion*/
+main .caja{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main table,
+main table td,
+main table th{
+  padding: 8px 16px;
+  border-collapse: collapse;
+}
+
+main table tbody .icon{
+  text-align: center;
+}
+
+main table thead tr{
+  background-color: #003249;
+  color: #fff;
+}
+
+/*Form*/
+form h3{
+  font-size: 2.1rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+.input-div{
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div.one{
+  margin-top: 0;
+}
+
+.input-div.two,
+.input-div.three{
+  margin-bottom: 4px;
+}
+
+.i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i{
+  color: #555; /* #d9d9d9;*/
+  transition: .3s; /*JS JSS JS*/
+}
+
+/*----------------- Javascript----------------------------------------*/
+
+                        .input-div.focus .i i{
+                          color: red;
+                        }
+
+                        .input-div.focus div h5{
+                          top: -5px;
+                          font-size: 15px;
+                        }
+
+.input-div::after,
+.input-div::before{
+  content: '';
+  width: 0; /* width: 50%; JS*/
+  height: 2px;
+  background: red;
+
+  position: absolute;
+  bottom: -2px;
+
+  transition: .3s; /*jsjsjsjs*/
+}
+
+.input-div::after{
+  right: 50%;
+}
+
+.input-div::before{
+left: 50%;
+}
+
+
+                        .input-div.focus::after,
+                        .input-div.focus::before{
+                              width: 50%;
+                        }
+
+/*--------------JAVASCRIPT--------------------*/
+
+.input-div > div{
+  position: relative;
+  height: 45px;
+}
+
+.input-div > div h5{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  background-size: 200%;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-position: right; /*del linear-gradient*/
+}
+
+main.multimedia{
+  text-align: center;
+}
+
+main.multimedia h3{
+  margin: 20px;
+}
+
+
+@media screen and (max-width: 1000px){
+  section{
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  section .phone{
+    display: none;
+  }
+
+  section ul{
+    perspective: none;
+    margin-left: 0;
+  }
+
+  section ul li{
+    margin: 20px;
+     transform: none;
+     border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  }
+
+  section ul li:hover{
+      transform: none;
+  }
+
+  section ul li img{
+    width: 40px;
+  }
+
+  section .behind{
+    position: static;
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 840px){
+  header nav ul li{
+    display: block;
+    padding: 48px;
+  }
+
+  header nav ul{
+    background-color: #F9EFF9;
+    position: absolute;
+    top: 80px;
+    width: 38%;
+  }
+
+  footer .container{
+    flex-direction: column;
+    text-align: center;
+  }
+}
